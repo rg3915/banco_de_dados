@@ -1,0 +1,42 @@
+\documentclass[tikz]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tikz-uml}
+\usepackage[pdfpagelayout=SinglePage]{hyperref}
+
+\begin{document}
+
+\begin{tikzpicture}
+	\umlclass[x=0,y=0]{cliente}{
+		- idCliente \\
+		- nome \\
+	}{}
+	\umlclass[x=5,y=0,fill=green!20]{pedido}{
+		- idPedido \\
+		- dataPedido \\
+		+ idCliente \\
+	}{}
+	\umlclass[x=5,y=-5,fill=green!20]{detPedido}{
+		- iddetPedido \\
+		+ idPedido \\
+		+ idProduto \\
+		- quantidade \\
+	}{}
+	\umlclass[x=10,y=-5]{produto}{
+		- idProduto \\
+		+ idCategoria \\
+		- produto \\
+		- preco \\
+	}{}
+	\umlclass[x=15,y=-5]{categoria}{
+		- idCategoria \\
+		- categoria \\
+	}{}
+
+	\umlassoc{cliente}{pedido}
+	\umlassoc[geometry=-|-]{pedido}{detPedido}
+	\umlassoc[geometry=-|-]{detPedido}{produto}
+	\umlassoc[geometry=-|-]{produto}{categoria}
+\end{tikzpicture}
+
+\end{document}
