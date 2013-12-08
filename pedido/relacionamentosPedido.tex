@@ -7,36 +7,36 @@
 \begin{document}
 
 \begin{tikzpicture}
-	\umlclass[x=0,y=0]{cliente}{
+	\umlclass[x=0,y=0]{clientes}{
 		- idCliente \\
 		- nome \\
 	}{}
-	\umlclass[x=5,y=0,fill=green!20]{pedido}{
+	\umlclass[x=5,y=0,fill=green!20]{pedidos}{
 		- idPedido \\
 		- dataPedido \\
 		+ idCliente \\
 	}{}
-	\umlclass[x=5,y=-5,fill=green!20]{detPedido}{
+	\umlclass[x=5,y=-5,fill=green!20]{detPedidos}{
 		- iddetPedido \\
 		+ idPedido \\
 		+ idProduto \\
 		- quantidade \\
 	}{}
-	\umlclass[x=10,y=-5]{produto}{
+	\umlclass[x=10,y=-5]{produtos}{
 		- idProduto \\
 		+ idCategoria \\
 		- produto \\
 		- preco \\
 	}{}
-	\umlclass[x=15,y=-5]{categoria}{
+	\umlclass[x=15,y=-5]{categorias}{
 		- idCategoria \\
 		- categoria \\
 	}{}
 
-	\umlassoc{cliente}{pedido}
-	\umlassoc[geometry=-|-]{pedido}{detPedido}
-	\umlassoc[geometry=-|-]{detPedido}{produto}
-	\umlassoc[geometry=-|-]{produto}{categoria}
+	\umlassoc{clientes}{pedidos}
+	\umlassoc[geometry=-|-]{pedidos}{detPedidos}
+	\umlassoc[geometry=-|-]{detPedidos}{produtos}
+	\umlassoc[geometry=-|-]{produtos}{categorias}
 \end{tikzpicture}
 
 \end{document}
