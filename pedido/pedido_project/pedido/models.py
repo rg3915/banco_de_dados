@@ -39,7 +39,7 @@ class Pedido(models.Model):
 	cliente = models.ForeignKey(Cliente)
 
 	def __unicode__(self):
-		return self.data_pedido
+		return unicode(self.data_pedido)
 
 class DetPedido(models.Model):
 	pedido = models.ForeignKey(Pedido)
@@ -47,4 +47,4 @@ class DetPedido(models.Model):
 	quantidade = models.IntegerField()
 
 	def __unicode__(self):
-		return self.pedido
+		return unicode(self.pedido)
