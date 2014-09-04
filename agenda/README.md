@@ -9,6 +9,12 @@ Além disso o contato pode possuir vários endereços, telefones e tags. As tags
 
 # Itens
 
+**mer.tex** é a modelagem conceitual (coloquei apenas as entidades). Para fazer este documento eu usei o [LaTeX][0] junto com o pacote [tikz-er2][2].
+
+Para compilar o documento eu uso o comando
+
+	$ latexmk -pdf mer.tex && latexmk -c
+
 **modelagem.png** mostra as tabelas feitas no *Workbench*.
 
 ![a](modelagem.png)
@@ -25,6 +31,8 @@ Além disso o contato pode possuir vários endereços, telefones e tags. As tags
 
 **admin.py** mostra em especial o uso do *TabularInline*.
 
-**Todo**: Leia [Como criar um site com formulário e lista em 30 minutos][0] e tente você mesmo recriar o modelo no Django.
+**Todo**: Leia [Como criar um site com formulário e lista em 30 minutos][1] e tente você mesmo recriar o modelo no Django.
 
-[0]: http://pythonclub.com.br/criar-site-com-form-lista-30-min.html
+[0]: http://latexbr.blogspot.com.br/
+[1]: http://pythonclub.com.br/criar-site-com-form-lista-30-min.html
+[2]: https://bitbucket.org/pavel_calado/tikz-er2/wiki/Home

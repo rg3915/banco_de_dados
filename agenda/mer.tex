@@ -1,0 +1,28 @@
+\documentclass{standalone}
+\usepackage{tikz-er2}
+%\usetikzlibrary{positioning}
+
+\begin{document}
+
+\tikzstyle{every entity} = [fill=blue!20]
+\tikzstyle{every relationship} = [fill=red!20]
+\begin{tikzpicture}[node distance=4cm]
+	% Contato
+	\node[entity] (contato) {Contato};
+	\node[relationship] (mora) [above right of=contato] {mora em} edge node[auto,swap] {1} (contato);
+	\node[relationship,fill=orange!50] (tem) [right of=contato] {tem} edge node[auto,swap] {n} (contato);
+	\node[relationship] (possui) [below right of=contato] {possui} edge node[auto,swap] {1} (contato);
+	\node[relationship] (relaciona) [left of=contato] {relaciona com} edge [total] (contato);
+
+	% Endereco
+	\node[entity] (endereco) [right of=mora] {Endere\c {c}o} edge node[auto,swap] {n} (mora);
+
+	% Fone
+	\node[entity] (fone) [right of=possui] {Fone} edge node[auto,swap] {n} (possui);
+
+	% Tag
+	\node[entity] (tag) [right of=tem] {Tag} edge node[auto,swap] {n} (tem);
+
+\end{tikzpicture}
+
+\end{document}
