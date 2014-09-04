@@ -11,9 +11,13 @@ Além disso o contato pode possuir vários endereços, telefones e tags. As tags
 
 **mer.tex** é a modelagem conceitual (coloquei apenas as entidades). Para fazer este documento eu usei o [LaTeX][0] junto com o pacote [tikz-er2][2].
 
-Para compilar o documento eu uso o comando
+Para compilar o documento use o comando
 
 	$ latexmk -pdf mer.tex && latexmk -c
+
+Para converter o **pdf** em **jpg** use o [Imagemagick][3].
+
+	$ convert -density 300 mer.pdf mer.jpg
 
 **modelagem.png** mostra as tabelas feitas no *Workbench*.
 
@@ -36,3 +40,4 @@ Para compilar o documento eu uso o comando
 [0]: http://latexbr.blogspot.com.br/
 [1]: http://pythonclub.com.br/criar-site-com-form-lista-30-min.html
 [2]: https://bitbucket.org/pavel_calado/tikz-er2/wiki/Home
+[3]: http://grandeportal.blogspot.com.br/2012/06/editando-imagens-no-imagemagick.html
