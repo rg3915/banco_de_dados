@@ -19,6 +19,8 @@ Para converter o **pdf** em **jpg** use o [Imagemagick][3].
 
 	$ convert -density 300 mer.pdf mer.jpg
 
+![mer](mer.jpg)
+
 **modelagem.png** mostra as tabelas feitas no *Workbench*.
 
 ![a](modelagem.png)
