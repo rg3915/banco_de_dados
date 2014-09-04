@@ -5,17 +5,17 @@ Agenda
 
 Modelar uma agenda de contatos onde um contato possa se relacionar com outras pessoas, semelhante aos relacionamentos do Facebook e Google+.
 
-Além disso o contato pode possuir vários endereços, telefones e tags. As tags servem para melhor identificação de cada contato.
+Além disso o contato pode possuir vários endereços, telefones e tags. As tags servem para melhorar a identificação de cada contato.
 
 # Itens
 
 **modelagem.png** mostra as tabelas feitas no *Workbench*.
 
-!(modelagem.png)
+![a](modelagem.png)
 
 **agenda_django.png** são as tabelas feitas no *Django*.
 
-!(agenda_django.png)
+![b](agenda_django.png)
 
 **agenda_mysql_workbench.sql** é o schema exportado do *Workbench*.
 
